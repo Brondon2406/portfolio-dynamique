@@ -1,22 +1,34 @@
 import express from 'express';
 import cors from 'cors';
-import { profileData } from './profileData.json';
-import { updateProfile } from './controllers/profileController';
+import { join } from 'path';
+import profileRoutes from './routes/profile';
+import adminRoutes from './routes/admin';
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// Middleware
+app.use(cors({
+  origin: [
+    'https://portfolio-dynamique-1.onrender.com',
+    'http://localhost:5173', // Pour le développement local
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
-// Route pour récupérer les données du profil
-app.get('/api/profile', (req, res) => {
-  res.json(profileData);
+// Routes
+app.use('/api/profile', profileRoutes);
+app.use('/api/admin', adminRoutes);
+
+// Route de base pour vérifier que le serveur fonctionne
+app.get('/', (req, res) => {
+  res.json({ message: 'Portfolio API is running' });
 });
 
-// Route pour mettre à jour le profil (admin)
-app.post('/api/admin/update-profile', updateProfile);
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+// Démarrage du serveur
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
+
+export default app;

@@ -1,29 +1,116 @@
 {
-  "profile": {
-    "name": "Fopa Tiwa Brondon",
-    "title": "Développeur Java & Architecte de solutions hospitalières",
-    "bio": "Passionné par la création de solutions robustes, sécurisées et conformes aux normes internationales. Fondateur de DIGITALIS avec le projet Meditech, un système de gestion hospitalière complet.",
-    "skills": ["Java", "Spring Boot", "Docker", "API REST", "DevOps", "Microservices", "MySQL", "Kubernetes"],
-    "projects": [
-      {
-        "name": "GUDMES",
-        "description": "Plateforme de gestion hospitalière conforme aux normes de santé, avec microservices Java.",
-        "technologies": ["Java", "Spring Boot", "Docker", "React", "Kubernetes"],
-        "github": "https://github.com/toncompte/gudmes",
-        "demo": "#"
-      },
-      {
-        "name": "Portefeuille dynamique",
-        "description": "Site web personnel avec backoffice pour gérer mes projets et compétences en temps réel.",
-        "technologies": ["TypeScript", "HTML", "LESS", "Node.js", "Express"],
-        "github": "#",
-        "demo": "#"
-      }
+  "basics": {
+    "name": "John Doe",
+    "title": "Développeur Full Stack",
+    "bio": "Je suis un passionné du développement web avec plus de 5 ans d'expérience dans la création d'applications modernes.",
+    "email": "john.doe@example.com",
+    "phone": "+33 6 12 34 56 78",
+    "location": "Paris, France",
+    "website": "https://portfolio-dynamique-1.onrender.com",
+    "social": [
+      { "name": "GitHub", "url": "https://github.com/johndoe" },
+      { "name": "LinkedIn", "url": "https://linkedin.com/in/johndoe" },
+      { "name": "Twitter", "url": "https://twitter.com/johndoe" }
     ],
-    "contact": {
-      "email": "fopa.tiwa@example.com",
-      "linkedin": "https://linkedin.com/in/fopa-tiwa",
-      "github": "https://github.com/toncompte"
+    "avatar": "https://via.placeholder.com/150"
+  },
+  "skills": [
+    {
+      "category": "Langages",
+      "items": ["JavaScript", "TypeScript", "HTML", "CSS", "SQL", "Python"]
+    },
+    {
+      "category": "Frameworks & Libraries",
+      "items": ["React", "Vue.js", "Node.js", "Express", "Bootstrap", "Tailwind CSS"]
+    },
+    {
+      "category": "Outils",
+      "items": ["Git", "Docker", "Webpack", "VS Code", "Figma"]
+    },
+    {
+      "category": "Bases de données",
+      "items": ["MongoDB", "PostgreSQL", "MySQL", "Redis"]
     }
-  }
+  ],
+  "experience": [
+    {
+      "title": "Développeur Full Stack",
+      "company": "Tech Solutions",
+      "location": "Paris",
+      "startDate": "2022-01",
+      "endDate": "Présent",
+      "description": "Développement d'applications web complètes en utilisant React, Node.js et MongoDB. Implémentation de nouvelles fonctionnalités et maintenance des applications existantes.",
+      "achievements": [
+        "Réduction de 30% du temps de chargement grâce à l'optimisation du code",
+        "Mise en place d'une suite de tests automatisés",
+        "Migration vers TypeScript pour améliorer la qualité du code"
+      ]
+    },
+    {
+      "title": "Développeur Frontend",
+      "company": "Digital Agency",
+      "location": "Lyon",
+      "startDate": "2020-03",
+      "endDate": "2021-12",
+      "description": "Développement d'interfaces utilisateur réactives avec React et Vue.js. Collaboration étroite avec les designers et les équipes backend.",
+      "achievements": [
+        "Développement d'une bibliothèque de composants réutilisables",
+        "Implémentation de designs responsives pour plus de 10 clients",
+        "Formation de junior développeurs aux meilleures pratiques frontend"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Université Paris Tech",
+      "degree": "Master en Informatique",
+      "fieldOfStudy": "Développement logiciel",
+      "startDate": "2018",
+      "endDate": "2020",
+      "description": "Spécialisation en développement d'applications web et mobiles avec une attention particulière aux technologies modernes."
+    },
+    {
+      "institution": "IUT de Lyon",
+      "degree": "DUT Informatique",
+      "fieldOfStudy": "Programmation et bases de données",
+      "startDate": "2016",
+      "endDate": "2018",
+      "description": "Formation aux fondamentaux de la programmation, des algorithmes et des bases de données."
+    }
+  ],
+  "projects": [
+    {
+      "title": "E-commerce Platform",
+      "description": "Application de commerce électronique complète avec panier, paiement et gestion des commandes.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe API"],
+      "link": "https://github.com/johndoe/ecommerce",
+      "image": "https://via.placeholder.com/300x200"
+    },
+    {
+      "title": "Task Manager",
+      "description": "Application de gestion de tâches avec fonctionnalités de collaboration en temps réel.",
+      "technologies": ["Vue.js", "Express", "Socket.io", "PostgreSQL"],
+      "link": "https://github.com/johndoe/taskmanager",
+      "image": "https://via.placeholder.com/300x200"
+    },
+    {
+      "title": "Portfolio Dynamique",
+      "description": "Portfolio personnel avec interface d'administration pour une mise à jour facile du contenu.",
+      "technologies": ["TypeScript", "Express", "HTML/CSS"],
+      "link": "https://portfolio-dynamique-1.onrender.com",
+      "image": "https://via.placeholder.com/300x200"
+    }
+  ],
+  "languages": [
+    { "language": "Français", "fluency": "Natif" },
+    { "language": "Anglais", "fluency": "Courant" },
+    { "language": "Espagnol", "fluency": "Intermédiaire" }
+  ],
+  "interests": [
+    "Développement web",
+    "Open source",
+    "UX/UI Design",
+    "Nouvelles technologies",
+    "Photographie"
+  ]
 }

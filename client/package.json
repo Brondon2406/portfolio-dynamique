@@ -1,8 +1,0 @@
-{
-  "scripts": {
-  "build": "tsc && cp -r client/* dist/"
-  },
-  "devDependencies": {
-    "typescript": "^5.8.3"
-  }
-}

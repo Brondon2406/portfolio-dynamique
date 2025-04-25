@@ -1,163 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Administration du Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Portfolio Dynamique</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="admin-wrapper">
-    <!-- Section de connexion -->
-    <div id="login-section" class="login-section">
-      <div class="login-container">
-        <h1>Administration du Portfolio</h1>
-        <form id="login-form" class="login-form">
-          <div class="form-group">
-            <label for="username">Nom d'utilisateur</label>
-            <input type="text" id="username" name="username" required>
-          </div>
-          <div class="form-group">
-            <label for="password">Mot de passe</label>
-            <input type="password" id="password" name="password" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Se connecter</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Interface d'administration -->
-    <div id="admin-panel" class="admin-panel hidden">
-      <div class="sidebar">
-        <div class="sidebar-header">
-          <h2>Portfolio Admin</h2>
-        </div>
-        <nav class="sidebar-nav">
-          <ul>
-            <li><a href="#" data-section="basics" class="active"><i class="fas fa-user"></i> Informations de base</a></li>
-            <li><a href="#" data-section="skills"><i class="fas fa-code"></i> Compétences</a></li>
-            <li><a href="#" data-section="experience"><i class="fas fa-briefcase"></i> Expérience</a></li>
-            <li><a href="#" data-section="education"><i class="fas fa-graduation-cap"></i> Formation</a></li>
-            <li><a href="#" data-section="projects"><i class="fas fa-project-diagram"></i> Projets</a></li>
-            <li><a href="#" data-section="languages"><i class="fas fa-language"></i> Langues</a></li>
-            <li><a href="#" data-section="interests"><i class="fas fa-heart"></i> Intérêts</a></li>
-          </ul>
-        </nav>
-        <div class="sidebar-footer">
-          <button id="logout-btn" class="btn btn-outline"><i class="fas fa-sign-out-alt"></i> Déconnexion</button>
-        </div>
-      </div>
-
-      <div class="content">
-        <div class="content-header">
-          <h1 id="section-title">Informations de base</h1>
-          <button id="save-btn" class="btn btn-success"><i class="fas fa-save"></i> Enregistrer</button>
-        </div>
-
-        <div class="content-body">
-          <!-- Section Informations de base -->
-          <div id="basics-section" class="form-section">
-            <div class="form-group">
-              <label for="name">Nom complet</label>
-              <input type="text" id="name" name="name">
-            </div>
-            <div class="form-group">
-              <label for="title">Titre / Poste</label>
-              <input type="text" id="title" name="title">
-            </div>
-            <div class="form-group">
-              <label for="bio">Biographie</label>
-              <textarea id="bio" name="bio" rows="4"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email">
-            </div>
-            <div class="form-group">
-              <label for="phone">Téléphone</label>
-              <input type="text" id="phone" name="phone">
-            </div>
-            <div class="form-group">
-              <label for="location">Localisation</label>
-              <input type="text" id="location" name="location">
-            </div>
-            <div class="form-group">
-              <label for="avatar">URL de l'avatar</label>
-              <input type="url" id="avatar" name="avatar">
-            </div>
-
-            <div class="form-section-title">Réseaux sociaux</div>
-            <div id="social-list" class="list-container">
-              <!-- Les réseaux sociaux seront ajoutés ici dynamiquement -->
-            </div>
-            <button type="button" id="add-social" class="btn btn-secondary">
-              <i class="fas fa-plus"></i> Ajouter un réseau social
-            </button>
-          </div>
-
-          <!-- Section Compétences -->
-          <div id="skills-section" class="form-section hidden">
-            <div id="skill-categories" class="list-container">
-              <!-- Les catégories de compétences seront ajoutées ici dynamiquement -->
-            </div>
-            <button type="button" id="add-skill-category" class="btn btn-secondary">
-              <i class="fas fa-plus"></i> Ajouter une catégorie
-            </button>
-          </div>
-
-          <!-- Section Expérience -->
-          <div id="experience-section" class="form-section hidden">
-            <div id="experience-list" class="list-container">
-              <!-- Les expériences seront ajoutées ici dynamiquement -->
-            </div>
-            <button type="button" id="add-experience" class="btn btn-secondary">
-              <i class="fas fa-plus"></i> Ajouter une expérience
-            </button>
-          </div>
-
-          <!-- Section Formation -->
-          <div id="education-section" class="form-section hidden">
-            <div id="education-list" class="list-container">
-              <!-- Les formations seront ajoutées ici dynamiquement -->
-            </div>
-            <button type="button" id="add-education" class="btn btn-secondary">
-              <i class="fas fa-plus"></i> Ajouter une formation
-            </button>
-          </div>
-
-          <!-- Section Projets -->
-          <div id="projects-section" class="form-section hidden">
-            <div id="projects-list" class="list-container">
-              <!-- Les projets seront ajoutés ici dynamiquement -->
-            </div>
-            <button type="button" id="add-project" class="btn btn-secondary">
-              <i class="fas fa-plus"></i> Ajouter un projet
-            </button>
-          </div>
-
-          <!-- Section Langues -->
-          <div id="languages-section" class="form-section hidden">
-            <div id="languages-list" class="list-container">
-              <!-- Les langues seront ajoutées ici dynamiquement -->
-            </div>
-            <button type="button" id="add-language" class="btn btn-secondary">
-              <i class="fas fa-plus"></i> Ajouter une langue
-            </button>
-          </div>
-
-          <!-- Section Intérêts -->
-          <div id="interests-section" class="form-section hidden">
-            <div class="form-group">
-              <label for="interests">Intérêts (séparés par des virgules)</label>
-              <textarea id="interests" name="interests" rows="3"></textarea>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="admin.ts" type="module"></script>
+    <header>
+        <h1>Interface d'administration</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Connexion</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+                <input type="password" id="password" placeholder="Mot de passe" required>
+                <button type="submit">Se connecter</button>
+            </form>
+        </section>
+        <section id="profileUpdateSection" style="display:none;">
+            <h2>Mettre à jour le profil</h2>
+            <form id="updateProfileForm">
+                <textarea id="bioText" placeholder="Bio"></textarea>
+                <button type="submit">Mettre à jour</button>
+            </form>
+        </section>
+    </main>
+    <script src="admin.ts"></script>
 </body>
 </html>

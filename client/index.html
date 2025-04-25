@@ -1,133 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Dynamique</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header id="header">
-    <div class="container">
-      <div class="profile-header">
-        <div class="profile-img" id="profile-avatar">
-          <!-- Avatar chargé dynamiquement -->
-        </div>
-        <div class="profile-info">
-          <h1 id="profile-name">Chargement...</h1>
-          <h2 id="profile-title">Chargement...</h2>
-          <ul class="social-links" id="social-links">
-            <!-- Liens sociaux chargés dynamiquement -->
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <nav class="navbar">
-    <div class="container">
-      <ul>
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#skills">Compétences</a></li>
-        <li><a href="#experience">Expérience</a></li>
-        <li><a href="#education">Formation</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main>
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">À propos de moi</h2>
-        <div class="about-content">
-          <p id="profile-bio">Chargement...</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <div class="container">
-        <h2 class="section-title">Compétences</h2>
-        <div class="skills-content" id="skills-content">
-          <!-- Compétences chargées dynamiquement -->
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section">
-      <div class="container">
-        <h2 class="section-title">Expérience professionnelle</h2>
-        <div class="timeline" id="experience-timeline">
-          <!-- Expériences chargées dynamiquement -->
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="section">
-      <div class="container">
-        <h2 class="section-title">Formation</h2>
-        <div class="timeline" id="education-timeline">
-          <!-- Formations chargées dynamiquement -->
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-title">Projets</h2>
-        <div class="projects-grid" id="projects-grid">
-          <!-- Projets chargés dynamiquement -->
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span id="profile-email">Chargement...</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <span id="profile-phone">Chargement...</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span id="profile-location">Chargement...</span>
-            </div>
-          </div>
-          <div class="contact-form">
-            <h3>Envoyez-moi un message</h3>
-            <form id="contact-form">
-              <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Votre nom" required>
-              </div>
-              <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Votre email" required>
-              </div>
-              <div class="form-group">
-                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-              </div>
-              <button type="submit" class="btn">Envoyer</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="current-year"></span> - Tous droits réservés</p>
-    </div>
-  </footer>
-
-  <script src="main.ts" type="module"></script>
+    <header>
+        <h1>Portfolio de John Doe</h1>
+        <nav>
+            <ul>
+                <li><a href="#bio">Bio</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="bio">
+            <h2>Biographie</h2>
+            <p id="bioContent"></p>
+        </section>
+        <section id="skills">
+            <h2>Compétences</h2>
+            <ul id="skillsList"></ul>
+        </section>
+        <section id="projects">
+            <h2>Projets</h2>
+            <div id="projectsList"></div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email : <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+        </section>
+    </main>
+    <script src="main.ts"></script>
 </body>
 </html>

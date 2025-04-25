@@ -1,12 +1,22 @@
 import express from 'express';
+import cors from 'cors';
+import { profileData } from './profileData.json';
+import { updateProfile } from './controllers/profileController';
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
-app.get('/', (_req, res) => {
-  res.send('Mon portfolio dynamique backend est prêt !');
+app.use(cors());
+app.use(express.json());
+
+// Route pour récupérer les données du profil
+app.get('/api/profile', (req, res) => {
+  res.json(profileData);
 });
 
+// Route pour mettre à jour le profil (admin)
+app.post('/api/admin/update-profile', updateProfile);
+
 app.listen(port, () => {
-  console.log(`Serveur lancé sur http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });

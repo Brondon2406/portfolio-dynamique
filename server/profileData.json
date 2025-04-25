@@ -1,0 +1,29 @@
+{
+  "profile": {
+    "name": "Fopa Tiwa Brondon",
+    "title": "Développeur Java & Architecte de solutions hospitalières",
+    "bio": "Passionné par la création de solutions robustes, sécurisées et conformes aux normes internationales. Fondateur de DIGITALIS avec le projet Meditech, un système de gestion hospitalière complet.",
+    "skills": ["Java", "Spring Boot", "Docker", "API REST", "DevOps", "Microservices", "MySQL", "Kubernetes"],
+    "projects": [
+      {
+        "name": "GUDMES",
+        "description": "Plateforme de gestion hospitalière conforme aux normes de santé, avec microservices Java.",
+        "technologies": ["Java", "Spring Boot", "Docker", "React", "Kubernetes"],
+        "github": "https://github.com/toncompte/gudmes",
+        "demo": "#"
+      },
+      {
+        "name": "Portefeuille dynamique",
+        "description": "Site web personnel avec backoffice pour gérer mes projets et compétences en temps réel.",
+        "technologies": ["TypeScript", "HTML", "LESS", "Node.js", "Express"],
+        "github": "#",
+        "demo": "#"
+      }
+    ],
+    "contact": {
+      "email": "fopa.tiwa@example.com",
+      "linkedin": "https://linkedin.com/in/fopa-tiwa",
+      "github": "https://github.com/toncompte"
+    }
+  }
+}

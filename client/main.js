@@ -1,4 +1,4 @@
-fetch('https://portfolio-dynamique.onrender.com')
+fetch('https://portfolio-dynamique.onrender.com/api/profile')
     .then(function (res) { return res.json(); })
     .then(function (data) {
     document.getElementById('name').textContent = data.name;
